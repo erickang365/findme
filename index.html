@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성향 분석 설문조사</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .center {
+            text-align: center;
+        }
+        .result-page {
+            display: none;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .result-page h1 {
+            font-size: 2em;
+        }
+        .result-page p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center">나의 성향을 찾아보세요!</h1>
+        <form id="survey-form">
+            <div>
+                <p>1. 가장 좋아하는 취미는 무엇인가요?</p>
+                <input type="radio" name="q1" value="a"> 독서<br>
+                <input type="radio" name="q1" value="b"> 운동<br>
+                <input type="radio" name="q1" value="c"> 영화 감상<br>
+                <input type="radio" name="q1" value="d"> 여행<br>
+                <input type="radio" name="q1" value="e"> 요리<br>
+            </div>
+            <div>
+                <p>2. 스트레스를 받을 때 주로 하는 행동은 무엇인가요?</p>
+                <input type="radio" name="q2" value="a"> 친구와 대화하기<br>
+                <input type="radio" name="q2" value="b"> 운동하기<br>
+                <input type="radio" name="q2" value="c"> 혼자 시간을 보내기<br>
+                <input type="radio" name="q2" value="d"> 맛있는 음식 먹기<br>
+                <input type="radio" name="q2" value="e"> 음악 듣기<br>
+            </div>
+            <div>
+                <p>3. 휴가를 보낼 때 선호하는 장소는 어디인가요?</p>
+                <input type="radio" name="q3" value="a"> 산<br>
+                <input type="radio" name="q3" value="b"> 바다<br>
+                <input type="radio" name="q3" value="c"> 도시<br>
+                <input type="radio" name="q3" value="d"> 시골<br>
+                <input type="radio" name="q3" value="e"> 해외 여행지<br>
+            </div>
+            <div>
+                <p>4. 주말에 가장 하고 싶은 활동은 무엇인가요?</p>
+                <input type="radio" name="q4" value="a"> 집에서 휴식<br>
+                <input type="radio" name="q4" value="b"> 친구들과 외출<br>
+                <input type="radio" name="q4" value="c"> 새로운 곳 탐험<br>
+                <input type="radio" name="q4" value="d"> 취미 활동<br>
+                <input type="radio" name="q4" value="e"> 운동<br>
+            </div>
+            <div>
+                <p>5. 가장 중요하게 생각하는 가치는 무엇인가요?</p>
+                <input type="radio" name="q5" value="a"> 가족<br>
+                <input type="radio" name="q5" value="b"> 성공<br>
+                <input type="radio" name="q5" value="c"> 자유<br>
+                <input type="radio" name="q5" value="d"> 사랑<br>
+                <input type="radio" name="q5" value="e"> 건강<br>
+            </div>
+            <div>
+                <p>6. 사랑하는 사람과의 갈등이 생겼을 때 당신의 대처 방식은 무엇인가요?</p>
+                <input type="radio" name="q6" value="a"> 바로 대화하여 해결<br>
+                <input type="radio" name="q6" value="b"> 시간을 두고 생각한 후 대화<br>
+                <input type="radio" name="q6" value="c"> 일단 피하고 나중에 해결<br>
+                <input type="radio" name="q6" value="d"> 먼저 사과하고 상황을 정리<br>
+                <input type="radio" name="q6" value="e"> 상대방의 의견을 먼저 들어봄<br>
+            </div>
+            <div>
+                <p>7. 친구들과의 약속이 있을 때 당신의 역할은 무엇인가요?</p>
+                <input type="radio" name="q7" value="a"> 주최자<br>
+                <input type="radio" name="q7" value="b"> 참여자<br>
+                <input type="radio" name="q7" value="c"> 중재자<br>
+                <input type="radio" name="q7" value="d"> 청취자<br>
+                <input type="radio" name="q7" value="e"> 후원자<br>
+            </div>
+            <div>
+                <p>8. 이상적인 데이트 코스는 무엇인가요?</p>
+                <input type="radio" name="q8" value="a"> 영화 관람 후 디너<br>
+                <input type="radio" name="q8" value="b"> 산책과 대화<br>
+                <input type="radio" name="q8" value="c"> 여행<br>
+                <input type="radio" name="q8" value="d"> 특별한 이벤트<br>
+                <input type="radio" name="q8" value="e"> 집에서 함께 요리하기<br>
+            </div>
+            <div>
+                <p>9. 사람들과의 모임에서 당신의 성격은 어떤가요?</p>
+                <input type="radio" name="q9" value="a"> 활발하고 사교적<br>
+                <input type="radio" name="q9" value="b"> 조용하고 내성적<br>
+                <input type="radio" name="q9" value="c"> 상황에 따라 다름<br>
+                <input type="radio" name="q9" value="d"> 리더 역할<br>
+                <input type="radio" name="q9" value="e"> 관찰자<br>
+            </div>
+            <div>
+                <p>10. 당신이 생각하는 완벽한 주말 아침은 어떤 모습인가요?</p>
+                <input type="radio" name="q10" value="a"> 늦잠 자기<br>
+                <input type="radio" name="q10" value="b"> 아침 운동<br>
+                <input type="radio" name="q10" value="c"> 맛있는 브런치<br>
+                <input type="radio" name="q10" value="d"> 책 읽기<br>
+                <input type="radio" name="q10" value="e"> 친구들과의 아침 모임<br>
+            </div>
+            <button type="button" onclick="calculateResult()">결과 확인</button>
+        </form>
+    </div>
+    <div id="result" class="result-page">
+        <h1 id="result-text"></h1>
+        <p id="result-description"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
